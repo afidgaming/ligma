@@ -8,8 +8,5 @@ ___
 - I do not hold any liability for these files, and I for a fact know some are even currupted (Mainly the PLinkers), and I'm providing exactly what I got and recieved with no modifications.
 - It has been pointed out that some of these files are related to "Voxel", a project by Outmoon. I'm not sure why that's in here, but whatever.
 ___
-### Have fun!
-Dig around, mess with these files, etc.. I don't care.
-___
 <33
 ~ Reggie, Latte Softworks
