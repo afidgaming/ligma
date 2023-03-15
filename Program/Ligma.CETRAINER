@@ -10,34 +10,7 @@ function CEMemo1Change(sender)
 txt = sender.Lines.Text
 if inputrr == 69 then inputrr = sender end
 end
-cookie = io.open("CookieData\\cookieid.txt")
-plc = io.open("CookieData\\animid.txt")
-if cookie == nil or plc == nil then
-	showMessage'ERROR: Failed to find cookie/anim data! Go in the folder CookieData and read instructions.'
-	return
-end
-cookie = cookie:read()
-plc = plc:read()
-cookie = ".ROBLOSECURITY="..string.gsub(cookie, "%.ROBLOSECURITY=", "")
-cookie = string.gsub(cookie, "\n", "")
---dont touch below--
 
-mahname = 'user'
-plxxxxx = 'Game'
-thechosenone = 0
-local b='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_'
-function enc(data)
-    return ((data:gsub('.', function(x)
-        local r,b='',x:byte()
-        for i=8,1,-1 do r=r..(b%2^i-b%2^(i-1)&gt;0 and '1' or '0') end
-        return r;
-    end)..'0000'):gsub('%d%d%d?%d?%d?%d?', function(x)
-
-        local c=0
-        for i=1,6 do c=c+(x:sub(i,i)=='1' and 2^(6-i) or 0) end
-        return b:sub(c+1,c+1)
-    end))
-end
 function updateChosen(yea)
 	writeString(thechosenone, yea)
     writeBytes(("0x"..thechosenone)+string.len(yea),0)
